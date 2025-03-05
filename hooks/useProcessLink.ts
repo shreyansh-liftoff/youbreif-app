@@ -24,7 +24,7 @@ const useProcessLink = () => {
     try {
       setVideoState({loading: true, error: undefined});
       const response = await fetch(
-        `${ENV.LOCAL_SERVER_URL}/video?url=${videoUrl}`,
+        `${ENV.SERVER_URL}/video?url=${videoUrl}`,
       );
       const data = await response.json();
       if (data.error) {
@@ -42,7 +42,7 @@ const useProcessLink = () => {
     try {
       setVideoState({loading: true, error: undefined});
       const response = await fetch(
-        `${ENV.LOCAL_SERVER_URL}/video?url=${videoUrl}`,
+        `${ENV.SERVER_URL}/video?url=${videoUrl}`,
         {
           method: 'POST',
         },
@@ -67,7 +67,7 @@ const useProcessLink = () => {
     try {
       setSummaryState({loading: true, error: undefined});
       const response = await fetch(
-        `${ENV.LOCAL_SERVER_URL}/video/update-summary?id=${id}`,
+        `${ENV.SERVER_URL}/video/update-summary?id=${id}`,
         {
           method: 'PUT',
           headers: {
@@ -92,7 +92,7 @@ const useProcessLink = () => {
     try {
       setSummaryState({loading: true, error: undefined});
       const response = await fetch(
-        `${ENV.LOCAL_SERVER_URL}/summary?url=${videoUrl}&language=${language}`,
+        `${ENV.SERVER_URL}/summary?url=${videoUrl}&language=${language}`,
         {
           method: 'POST',
         },
@@ -113,7 +113,7 @@ const useProcessLink = () => {
     try {
       setAudioState({loading: true, error: undefined});
       const response = await fetch(
-        `${ENV.LOCAL_SERVER_URL}/audio?id=${id}&language=${language}`,
+        `${ENV.SERVER_URL}/audio?id=${id}&language=${language}`,
         {
           method: 'POST',
         },
@@ -138,7 +138,7 @@ const useProcessLink = () => {
     try {
       setAudioState({loading: true, error: undefined});
       const response = await fetch(
-        `${ENV.LOCAL_SERVER_URL}/video/update-audio-url/?id=${id}&language=${language}&url=${audioUrl}`,
+        `${ENV.SERVER_URL}/video/update-audio-url/?id=${id}&language=${language}&url=${audioUrl}`,
         {
           method: 'PUT',
         },

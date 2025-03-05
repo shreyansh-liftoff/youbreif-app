@@ -16,7 +16,7 @@ const AllSummaries = ({
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   const fetchFunction = async (offset: number, limit: number) => {
     const response = await fetch(
-      `${ENV.LOCAL_SERVER_URL}/video/all?offset=${offset}&limit=${limit}`,
+      `${ENV.SERVER_URL}/video/all?offset=${offset}&limit=${limit}`,
     );
     const data = await response.json();
     return data;
