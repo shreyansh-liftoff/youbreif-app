@@ -3,6 +3,8 @@ workflows:
     name: iOS Workflow
     max_build_duration: 60
     environment:
+      groups:
+        - ios_credentials
       vars:
         XCODE_WORKSPACE: youbrief.xcworkspace
         XCODE_SCHEME: youbriefScheme
