@@ -6,8 +6,7 @@ workflows:
       vars:
         XCODE_WORKSPACE: youbrief.xcworkspace
         XCODE_SCHEME: youbriefScheme
-      ios:
-        xcode: latest
+      xcode: latest
     scripts:
       - name: Install dependencies
         script: |
